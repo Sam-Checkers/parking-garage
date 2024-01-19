@@ -35,7 +35,7 @@ def get_contact(current_user_token):
     response = contact_schema.dump(contacts)
     return jsonify(response)
 
-@api.route('/contacts/<id>', method= ['GET'])
+@api.route('/contacts/<id>', methods= ['GET'])
 @token_required
 def get_single_contact(current_user_token, id):
     fan = current_user_token
